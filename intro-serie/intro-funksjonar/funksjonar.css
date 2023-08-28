@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tastatur {
+    font-size: 5em;
+    color: blue;
+}
