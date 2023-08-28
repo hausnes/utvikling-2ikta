@@ -1,0 +1,59 @@
+html, body {
+    width: 100%;
+    height: 100%; margin: 0; padding: 0;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "a b c d d"
+    "a f f g i"
+    "e f f h i";
+}
+#main > div {
+    border: 1px solid black;
+    padding: 10px;
+    /* display: grid;
+    place-items: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; */
+}
+
+.ga1 { grid-area: a; }
+.ga2 { grid-area: b; }
+.ga3 { grid-area: c; }
+.ga4 { grid-area: d; }
+.ga5 { grid-area: e; }
+.ga6 { grid-area: f; background-color: aquamarine; }
+.ga7 { grid-area: g; }
+.ga8 { grid-area: h; }
+.ga9 { grid-area: i; }
+
+.ga2 {
+    background: url('bilder/presang.jpg');
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    #main {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+        "a b c"
+        "a f f"
+        "e f f"
+        "d d g"
+        "i h ."
+        "i . .";
+    }
+}

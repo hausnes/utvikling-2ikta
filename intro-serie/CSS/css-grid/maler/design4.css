@@ -1,0 +1,30 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#hoved {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "h  h  h  h  h  h  h  h  h  h  hh hh"
+        "fv fv fm fm fm fm fm fm fm fm fh fh";
+}
+
+#hoved > div {
+    background-color: green;
+    border: 1px solid black;
+}
+
+.header { grid-area: h; }
+.header-hogre { grid-area: hh; }
+.footer-venstre { grid-area: fv; }
+.footer-midten { grid-area: fm; }
+.footer-hogre { grid-area: fh; }

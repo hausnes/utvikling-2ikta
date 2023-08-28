@@ -1,0 +1,38 @@
+#hoved {
+    display: grid;
+    background-color: #c6c6c6;
+    height: 400px;
+    width: 400px;
+    
+    /* Startkode frå bok */
+    /* grid-template-columns: 100px auto 100px; 
+    grid-template-rows: 100px auto 100px; */
+
+    /* Oppgåve: lage 9 stk kvadratiske boksar. NB: Bruke gap? */
+    /* grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px; */
+
+    /* Eksempel: Bruke fractions */
+    /* grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr; */
+
+    /* Fractions og repeat */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    /* gap: 2rem; */
+}
+
+#hoved > div {
+    background-color: #aac9c6;
+    border: 1px solid black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#hoved > div:nth-child(even) {
+    background-color: aqua;
+}
