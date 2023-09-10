@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrangement</title>
+    <link rel="stylesheet" href="arrangement.css">
+    <script src="arrangement.js" defer></script>
+</head>
+<body>
+    <!-- Skjema for å registrere seg på arrangementet: -->
+    <form id="skjemaArrangement">
+        <!-- Fornavn -->
+        <label for="fornavn">Fornavn:</label>
+        <input type="text" id="fornavn" required>
+        
+        <!-- Etternavn -->
+        <label for="etternavn">Etternavn:</label>
+        <input type="text" id="etternavn" required>
+        
+        <!-- E-post -->
+        <label for="epost">E-post:</label>
+        <input type="email" id="epost" required>
+        
+        <!-- Telefon -->
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" 
+               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+               placeholder="123-45-678">
+        
+        <!-- Passord -->
+        <label for="passord">Passord:</label>
+        <input type="password" id="passord" required>
+        
+        <!-- Knapp for å sende inn skjemaet -->
+        <button type="submit">Send inn</button> <!-- NB: Lyttefunksjon er knytta til form, ikkje knapp! -->
+    </form>
+
+    <!-- Knapp for å sjekke deltakarliste, ein type debug-knapp: -->
+    <button id="knappUtskrift">Sjekk deltakarliste</button>
+
+    <!-- Modal for å skrive ut deltakarliste, der denne skal vere skjult ved oppstart: -->
+    <div id="modal">
+        <div id="modalInnhold">
+            <span id="modalLukk">&times;</span>
+            <h2>Deltakarliste</h2>
+            <div id="deltakarliste"></div>
+        </div>
+    </div>
+</body>
+</html>
