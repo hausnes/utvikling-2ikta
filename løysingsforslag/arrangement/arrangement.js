@@ -139,7 +139,6 @@ function kontrollerPassord(passord) {
     // Endeleg beskjed om status for styrke, dvs. om passordet er sterkt nok: 3 av 4 krav må oppfyllast
     if (styrke < 3) {
         // Gi beskjed til brukar om at passordet ikkje er sterkt nok
-        alert("Passordet er ikkje sterkt nok, deltakar ikkje registrert.");
         return false;
     }
     else {
