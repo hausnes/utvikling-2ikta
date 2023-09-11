@@ -2,7 +2,7 @@ let alfabet = "0123456789abcdefghijklmnopqrstuvwxyzæøåABCDEFGHIJKLMNOPQRSTUVW
 let alfabetLengde = alfabet.length;
 console.log("Alfabetlengde: " + alfabetLengde);
     
-let krypteringsnokkel = 0; // "Forskyvningen", kvitteringsnøkkelen, eksempelvis skal 'a' bli 'c'. 0 gjer at 'a' blir 'a', 1 gjer at 'a' blir 'b' osv
+let krypteringsnokkel = 0; // "Forskyvningen", krypteringsnøkkelen, eksempelvis skal 'a' bli 'c'. 0 gjer at 'a' blir 'a', 1 gjer at 'a' blir 'b' osv
 let karakter = "";
 
 // Krypteringsfunksjonen, som får inn bokstaven ein skal kryptere, 

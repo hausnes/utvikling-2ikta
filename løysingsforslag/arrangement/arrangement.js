@@ -78,6 +78,9 @@ function skrivUtDeltakarliste() {
     modal.style.display = "block";
     console.log(modal);
 
+    // Fjern alt som er i indre del av modal frå før
+    document.querySelector("#deltakarliste").innerHTML = "";    
+
     // Ei løkke som går gjennom alle element og skriv dei ut
     for (let [key, value] of deltakarar.entries()) {
         console.log(key, value);
