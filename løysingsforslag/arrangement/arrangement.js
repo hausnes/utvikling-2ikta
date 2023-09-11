@@ -79,7 +79,8 @@ function skrivUtDeltakarliste() {
     console.log(modal);
 
     // Fjern alt som er i indre del av modal frå før
-    document.querySelector("#deltakarliste").innerHTML = "";    
+    let utskrift = document.querySelector("#deltakarliste");
+    utskrift.innerHTML = "";    
 
     // Ei løkke som går gjennom alle element og skriv dei ut
     for (let [key, value] of deltakarar.entries()) {
@@ -89,22 +90,22 @@ function skrivUtDeltakarliste() {
         let elNavn = document.createElement("h3");
         let navn = value.fornavn + " " + value.etternavn;
         elNavn.innerText = navn;
-        modal.appendChild(elNavn);
+        utskrift.appendChild(elNavn);
 
         // Epost til deltakar
         let elEpost = document.createElement("p");
         elEpost.innerText = value.epost;
-        modal.appendChild(elEpost);
+        utskrift.appendChild(elEpost);
 
         // Telefonnummer til deltakar
         let elTelefon = document.createElement("p");
         elTelefon.innerText = value.telefon;
-        modal.appendChild(elTelefon);
+        utskrift.appendChild(elTelefon);
 
         // Passord til deltakar
         let elPassord = document.createElement("p");
         elPassord.innerText = value.passord;
-        modal.appendChild(elPassord);
+        utskrift.appendChild(elPassord);
     };
 }
 
