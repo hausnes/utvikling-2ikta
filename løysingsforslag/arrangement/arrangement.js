@@ -29,7 +29,7 @@ function lagreDeltakar(e) {
 
     // Lag ein deltakar basert på data i skjema
     let deltakar = {
-        fornavn:   skjema.fornavn.value,
+        fornavn:   skjema.fornavn.value, // Kunne og skrive document.querySelector("#fornavn").value
         etternavn: skjema.etternavn.value,
         epost:     skjema.epost.value,
         telefon:   skjema.telefon.value,
@@ -48,11 +48,11 @@ function lagreDeltakar(e) {
     // Kontroller at passordet er sterkt nok
     if (!kontrollerPassord(deltakar.passord)) { // Sjå funksjonen kontrollerPassord lengre ned
         // Gi beskjed til brukar om at passordet ikkje er sterkt nok
-        alert("Passordet er ikkje sterkt nok, deltakar ikkje registrert.");
+        alert("Passordet er ikkje sterkt nok, deltakar IKKJE registrert.");
         return; // Avslutt funksjonen, dvs. ikkje legg til deltakar
     }
 
-    // Legg til deltakar i map
+    // Dersom ingen feil over, legg til deltakar i map
     deltakarar.set(deltakar.epost, deltakar);
 
     // Utskrift for å sjå at deltakarlista fungerer
