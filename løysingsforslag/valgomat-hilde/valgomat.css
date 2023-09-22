@@ -10,12 +10,18 @@ body {
     background-color: rgb(232, 232, 255);
 }
 
+.rød {
+    color: red;
+}
+
 main {
     border: 1px solid black;
     padding: 2rem;
     background-color: white;
     width: 400px;
     height: 350px;
+
+    text-align: center;
 }
 
 button {
