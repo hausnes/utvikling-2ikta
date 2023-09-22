@@ -40,6 +40,7 @@ const questions = [ // NB: Dette er ein array med objekt (ikkje map)
     }
 ]; 
 
+// Her lagrast resultata undervegs - basert på kva du velgjer når du trykker på einig - uenig
 let partyScores = {
     MDG: 0,
     A: 0,
