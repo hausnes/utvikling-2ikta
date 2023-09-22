@@ -47,9 +47,9 @@ let partyScores = {
     H: 0
 }
 
-const questionT = document.getElementById('question');
+const questionT = document.getElementById('question'); // Der me skriv ut spørsmålet
 const btnNext = document.getElementById('btnNext');
-const rbAnswer = document.getElementsByName('answer');
+const rbAnswer = document.getElementsByName('answer'); // radiobuttons (fleirtal)
 const inputForm = document.getElementById('valgomatForm');
 
 btnNext.addEventListener('click', nextQuestion);
@@ -67,7 +67,7 @@ function nextQuestion() {
             radioChecked.checked = false;
             questionT.innerHTML = questions[qidx].question; // Skriver ut neste spørsmål til HTML
         }
-        else { 
+        else {  // Dersom det ikkje er fleire spørsmål igjen så kan me kalle på funksjonen som oppsummer resultatet
             inputForm.style.display = 'none'; // Skjuler skjemaet
             showResult(); 
         }
@@ -111,27 +111,4 @@ function showResult() {
     for (let party in sortedPartyScores) {
         resultBox.innerHTML += party + ": " + sortedPartyScores[party] + "<br>";
     }
-    
-    // Alternativ løsning med map, gjort i den andre klassen
-    // let sorted = new Map();
-    // const resultBox = document.getElementById("result");
-
-    // while (sorted.size < Object.keys(partyScores).length ) {
-    //     let max = null;
-
-    //     for (party in partyScores) {
-    //         if (max ===null && !sorted.has(party)) {
-    //             max = party;
-    //         }
-    //         else if(partyScores[party] > partyScores[max] && !sorted.has(party)) {
-    //             max = party;
-    //         }
-    //     }
-    //     sorted.set(max, partyScores[max]);
-    // }
-
-    // console.log("Sortert etter poengsum: ");
-    // sorted.forEach((score, party) => {
-    //     console.log(party, score);
-    // });
 }
