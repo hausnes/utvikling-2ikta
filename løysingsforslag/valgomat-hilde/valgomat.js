@@ -63,7 +63,7 @@ function nextQuestion() {
     if (radioChecked) {
         calculateResult(qidx, radioChecked.value); // regner ut resultatet
         qidx++; // øker spørsmåls-ID med 1
-        if (qidx < questions.length) {
+        if (qidx < questions.length) { // Dersom det er fleire spørsmål igjen
             radioChecked.checked = false;
             questionT.innerHTML = questions[qidx].question; // Skriver ut neste spørsmål til HTML
         }
