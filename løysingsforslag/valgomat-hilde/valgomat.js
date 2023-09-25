@@ -108,6 +108,7 @@ function showResult() {
 
     // Skriver ut resultatet til HTML
     const resultBox = document.getElementById("result");
+    resultBox.innerHTML = "";
     for (let party in sortedPartyScores) {
         resultBox.innerHTML += party + ": " + sortedPartyScores[party] + "<br>";
     }
