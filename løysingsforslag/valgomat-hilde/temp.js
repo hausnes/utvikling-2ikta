@@ -62,3 +62,10 @@ entries.sort ((a, b) => b [1] - a [1]);
 let sortedPartyScores = Object.fromEntries(entries);
 
 console.log(sortedPartyScores); 
+
+
+
+
+let score = 3;
+console.log("Du fikk " + score + " poeng. Det var 'kjempebra!'");
+console.log(`Du fikk ${score} poeng! Det var "kjempebra"!`);
