@@ -5,12 +5,13 @@ skjema.addEventListener("submit", function (event) {
     console.log("Du har svart på spørsmålene!");
 
     const sporsmal1 = skjema.elements["question1"];
+    console.log(sporsmal1); // Skriv ut for å sjå kva dette er, og kan sjå at det er ei node-liste
     const sporsmal2 = skjema.elements["question2"];
-
+    
     let svar1 = "";
     let svar2 = "";
 
-    for (let i = 0; i < sporsmal1.length; i++) {
+    for (let i = 0; i < sporsmal1.length; i++) { // Går gjennom alle radioknappane som ligg i node-lista og sjekkar om dei er valde
         if (sporsmal1[i].checked) {
             svar1 = sporsmal1[i].value;
             break;
