@@ -8,7 +8,7 @@ const publicMappe = path.join(__dirname, "public");
 app.use(express.static(publicMappe));
 
 // "startside"
-app.get('/running', (request, response) => response.send('Node is up and running!'));
+app.get('/running', (_request, response) => response.send('Node is up and running!'));
 
 // Public-mappa
 app.get('/', (request, response) => {
@@ -20,7 +20,7 @@ app.get('/', (request, response) => {
 // Hente data frå randomuserme-API
 async function getUsers(request, response) {
     if (!request.query.results) {
-        request.query.results = 2; // Default er altså no å be om 2 stk. brukarar. Begrens deg litt her, så du ikkje blir blokkert.
+        request.query.results = 1; // Default er altså no å be om 2 stk. brukarar. Begrens deg litt her, så du ikkje blir blokkert.
     }
 
     if (!request.query.nat) {
@@ -28,9 +28,16 @@ async function getUsers(request, response) {
     }
 
     const baseURL = "https://randomuser.me/api/?"
-    const url = baseURL + new URLSearchParams(request.query);
+    const url = baseURL + new URLSearchParams(request.query); // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
     console.log("URL så langt: " + url);
+    
+    // Kan sjekke om ein har spurt om norske brukarar, og reagere på det
+    const params = new URLSearchParams(request.query);
+    if (params.get("nat") === "no") { // Ein test for å bruke "has"
+        console.log("Det blei bedt om norske brukarar, reagerer på dette.");
+    }
 
+    // Hent data frå randomuserme-API
     const fetch_response = await fetch(url);
     const json = await fetch_response.json();
     console.log("JSON-resultat: ");
