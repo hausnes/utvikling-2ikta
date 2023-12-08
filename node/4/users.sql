@@ -7,4 +7,3 @@ CREATE TABLE user (
     role INTEGER NOT NULL,
     password TEXT NOT NULL
 );
-

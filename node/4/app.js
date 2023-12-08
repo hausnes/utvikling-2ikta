@@ -105,6 +105,7 @@ function updateUserDB(username, firstName, lastName, mobile) {
     const info = sql.run(firstName, lastName, mobile, username)
 };
 
+
 app.get('/', (req, res) => {  
     if (req.session.loggedIn != undefined && req.session.loggedIn) {
         res.sendFile(path.join(__dirname, 'public/index.html'));
