@@ -25,6 +25,17 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items:center;
+}
+
+input {
+    width: 40%;
+    height: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#utskrift {
+    height: 200px;
 }

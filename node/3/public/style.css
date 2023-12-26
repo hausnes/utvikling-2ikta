@@ -1,0 +1,44 @@
+/* horisontal meny vha flexbox */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+/* Stilsetter skjemaet */
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+
+/* Stilsetter inputfeltene */
+input {
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #CCC;
+    border-radius: 0.5em;
+    width: 80%;
+}
+
+/* Stilsetter knappen */
+button {
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #CCC;
+    border-radius: 0.5em;
+    width: 80%;
+}
