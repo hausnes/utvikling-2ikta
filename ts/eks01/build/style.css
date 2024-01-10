@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="email"],
+form input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Games */
+ul#games {
+    width: 400px;
+    list-style: none;
+    padding: 0;
+}
+
+ul#games li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+ul#games li h2 {
+    margin: 0 0 10px 0;
+    color: #007BFF;
+}
+
+ul#games li p {
+    margin: 0 0 10px 0;
+}
+
+ul#games li img {
+    max-width: 100%;
+    height: auto;
+}
