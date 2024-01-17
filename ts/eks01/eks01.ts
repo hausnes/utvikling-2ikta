@@ -23,18 +23,34 @@ const games: Game[] = [
 ];
 
 function renderGames(games: Game[]) {
-    const ul = document.getElementById("games") as HTMLUListElement;
+    const ul = document.createElement("ul");
     games.forEach((game) => {
         const li = document.createElement("li");
-        li.innerHTML = `
-            
-            <h2>${game.title}</h2>
-            <input type="checkbox" class="gameCheckbox" value="${game.title}">
-            <p>Released: ${game.releaseYear}</p>
-            <img src="${game.imageUrl}" alt="${game.title}" width="100px">
-        `;
+
+        const h2 = document.createElement("h2");
+        h2.textContent = game.title;
+        li.appendChild(h2);
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.className = "gameCheckbox";
+        checkbox.value = game.title;
+        li.appendChild(checkbox);
+
+        const p = document.createElement("p");
+        p.textContent = `Released: ${game.releaseYear}`;
+        li.appendChild(p);
+
+        const img = document.createElement("img");
+        img.src = game.imageUrl;
+        img.alt = game.title;
+        img.width = 100;
+        li.appendChild(img);
+
         ul.appendChild(li);
     });
+
+    document.getElementById("games")!.appendChild(ul);
 }
 
 renderGames(games);
