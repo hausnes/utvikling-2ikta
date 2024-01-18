@@ -1,4 +1,4 @@
-interface User {
+interface User { // NB: Kunne like gjerne brukt type i dette eksempelet
     id: number;
     name: string;
     email: string;
@@ -26,6 +26,9 @@ let users: User[] = [
     }
 ];
 
+console.table(users);
+console.log(users[0].dateOfBirth);
+
 function addUser(user: User) {
     users.push(user);
 }
@@ -39,9 +42,19 @@ addUser({
 
 function getUserById(id: number): User | undefined {
     return users.find(user => user.id === id);
+
+    // Alternativ, om users.find oppleves for avansert:
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].id === id) {
+            return users[i];
+        }
+    }
+    
+    return undefined;
 }
 
 const user = getUserById(3);
 if (user) {
-    console.table(user);
+    // console.table(user); // Problem: dateOfBirth blir ikkje skrive ut
+    console.log(user);
 }
