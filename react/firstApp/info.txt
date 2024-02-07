@@ -1,0 +1,17 @@
+NB: https://react.dev/learn/start-a-new-react-project
+
+create-react-app er ikkje lenger anbefalt, men kan vere ein kjapp måte å sette opp eit testmiljø på.
+
+I så tilfelle:
+Ta utgangspunkt i https://www.codecademy.com/courses/react-101/articles/how-to-create-a-react-app
+(som baserer seg på https://create-react-app.dev/docs/getting-started/)
+
+Kort og brutalt:
+npx create-react-app myfirstreactapp
+npm start (i myfirstreactapp-mappa)
+Gjer enkel endring i App.js og sjekk endring i nettlesar.
+Tips:
+As your React app grows, it is common to add a components/ directory to organize components and component-related files 
+and a views/ directory to organize React views and view-related files.
+Legg til eigne komponentar.
+...
