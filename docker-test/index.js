@@ -14,6 +14,10 @@ app.get('/users', (req, res) => {
     res.json(users);
 });
 
+app.get('/test', (req, res) => {
+    res.send('Test');
+});
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });

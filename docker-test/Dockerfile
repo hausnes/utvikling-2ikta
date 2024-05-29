@@ -4,7 +4,7 @@
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/engine/reference/builder/
 
-ARG NODE_VERSION=20.9.0
+ARG NODE_VERSION=20.10.0
 
 FROM node:${NODE_VERSION}-alpine
 
@@ -33,4 +33,4 @@ COPY . .
 EXPOSE 3000
 
 # Run the application.
-CMD node app.js
+CMD node index.js
